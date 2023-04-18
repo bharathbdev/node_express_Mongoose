@@ -9,6 +9,12 @@ module.exports = app => {
   // Retrieve all Tutorials
   router.get("/", tutorials.findAll);
 
+  router.get("/downloadUsingjson2csv", tutorials.download);
+
+  router.get("/downloadUsingexceljs", tutorials.downloadExceljs);
+
+  router.get("/downloadUsingCsvWriter", tutorials.downloadCsvWriter);
+
   // Retrieve all published Tutorials
   router.get("/published", tutorials.findAllPublished);
 
